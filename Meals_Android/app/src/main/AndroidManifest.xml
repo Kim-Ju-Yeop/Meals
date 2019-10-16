@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.techtown.project5">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/meals_logo"
+        android:label="Meals"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/close">
+        <activity android:name=".Activity.MealsActivity"
+            android:theme="@style/close"></activity>
+        <!-- SchoolActivity -->
+        <activity
+            android:name=".Activity.SchoolActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity> <!-- SplashActivity -->
+        <activity
+            android:name=".Activity.SplashActivity"
+            android:theme="@style/close">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- MainActivity -->
+        <activity
+            android:name=".Activity.MainActivity"
+            android:theme="@style/close" />
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

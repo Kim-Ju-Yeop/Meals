@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <group>
+        <item
+            android:id="@+id/search_school"
+            android:title="다른 학교 검색하기"
+            android:icon="@drawable/search" />
+        <item
+            android:id="@+id/developer_introduce"
+            android:title="개발자 소개" />
+    </group>
+
+</menu>
