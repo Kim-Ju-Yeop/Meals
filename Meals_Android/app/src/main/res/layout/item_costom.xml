@@ -23,9 +23,12 @@
             android:id="@+id/text_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="title"
             android:textColor="#000000"
-            android:textSize="20sp" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nanum_font"/>
 
         <TextView
             android:id="@+id/text_content"
@@ -33,7 +36,9 @@
             android:layout_height="30dp"
             android:text="content"
             android:textColor="#000000"
-            android:textSize="13sp" />
+            android:textSize="11sp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/nanum_font"/>
 
     </LinearLayout>
 </LinearLayout>

@@ -6,9 +6,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import org.techtown.project5.Handler.BackPressCloseHandler;
 import org.techtown.project5.R;
 
 public class MainActivity extends AppCompatActivity {
+
+    private BackPressCloseHandler backPressCloseHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
            Intent checkMeals = new Intent(MainActivity.this, MealsActivity.class);
            startActivity(checkMeals);
-
         }
 
         // check 변수의 값이 0 이라면 사용자는 애플리케이션을 이번에 처음으로 사용하는 것입니다.
@@ -37,10 +39,12 @@ public class MainActivity extends AppCompatActivity {
             startActivity(searchSchool);
         }
 
-
+        backPressCloseHandler = new BackPressCloseHandler(this);
     }
 
+    @Override
+    public void onBackPressed() {
 
-
-
+        backPressCloseHandler.onBackPressed();
+    }
 }

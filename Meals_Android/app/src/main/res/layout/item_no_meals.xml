@@ -26,6 +26,7 @@
             android:layout_marginTop="15dp"
             android:gravity="center"
             android:text="급식 정보가 존재하지 않습니다."
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:fontFamily="@font/nanum_font"/>
     </LinearLayout>
 </LinearLayout>

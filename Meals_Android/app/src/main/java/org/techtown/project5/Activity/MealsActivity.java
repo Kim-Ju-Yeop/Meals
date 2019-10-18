@@ -27,6 +27,7 @@ import org.techtown.project5.Fragment.Breakfast;
 import org.techtown.project5.Fragment.Dinner;
 import org.techtown.project5.Fragment.Lunch;
 import org.techtown.project5.FragmentAdapter.Fragment_Adapter;
+import org.techtown.project5.Handler.BackPressCloseHandler;
 import org.techtown.project5.Network.Data;
 import org.techtown.project5.Network.NetRetrofit;
 import org.techtown.project5.Network.response.Response;
@@ -50,6 +51,8 @@ public class MealsActivity extends AppCompatActivity {
 
     // 24시간대 형식으로 진행하려면 kk 를 사용하면 됩니다.
     SimpleDateFormat mFormat = new SimpleDateFormat("kk : mm : ss", Locale.KOREA);
+    SimpleDateFormat date = new SimpleDateFormat("HH", Locale.KOREA);
+    Date today = new Date();
     private CountDownTimer _timer;
     public static int check = 0;
 
@@ -62,6 +65,7 @@ public class MealsActivity extends AppCompatActivity {
 
     // Adapter
     Fragment_Adapter adapter;
+    private BackPressCloseHandler backPressCloseHandler;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -107,8 +111,6 @@ public class MealsActivity extends AppCompatActivity {
 
         school_name.setText(schoolName);
 
-        // checkMeals();
-
         tabLayout.addTab(tabLayout.newTab().setText("아침"));
         tabLayout.addTab(tabLayout.newTab().setText("점심"));
         tabLayout.addTab(tabLayout.newTab().setText("저녁"));
@@ -136,6 +138,14 @@ public class MealsActivity extends AppCompatActivity {
             }
         });
 
+        backPressCloseHandler = new BackPressCloseHandler(this);
+
+
+        String test = date.format(today);
+
+        if(Integer.parseInt(test) < Integer.parseInt("20")){
+        }
+
     }
 
     private String getTime(){
@@ -145,9 +155,9 @@ public class MealsActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
 
-        ActivityCompat.finishAffinity(this);
+        backPressCloseHandler.onBackPressed();
     }
 
     @Override

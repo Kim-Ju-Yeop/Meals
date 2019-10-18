@@ -13,10 +13,12 @@ import android.graphics.Paint;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -28,6 +30,7 @@ import android.widget.Toast;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.techtown.project5.Adapter.Adapter;
+import org.techtown.project5.Handler.BackPressCloseHandler;
 import org.techtown.project5.Model.DTO;
 import org.techtown.project5.Network.Data;
 import org.techtown.project5.Network.NetRetrofit;
@@ -51,6 +54,8 @@ public class SchoolActivity extends AppCompatActivity {
     LinearLayout question_layout;
     EditText searchSchool;
     LinearLayout noSchool_layout;
+
+    private BackPressCloseHandler backPressCloseHandler;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -87,6 +92,22 @@ public class SchoolActivity extends AppCompatActivity {
 
         textView.setPaintFlags(textView.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
+        // 키보드 확인 버튼 클릭 시 검색
+        editText.setImeOptions(EditorInfo.IME_ACTION_DONE);
+        editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+
+                if(actionId == EditorInfo.IME_ACTION_DONE){
+
+                    onSearch();
+                }
+
+                return false;
+            }
+        });
+
+        backPressCloseHandler = new BackPressCloseHandler(this);
     }
 
     @Override
@@ -278,7 +299,7 @@ public class SchoolActivity extends AppCompatActivity {
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         } else{
 
-            ActivityCompat.finishAffinity(this);
+            backPressCloseHandler.onBackPressed();
         }
 
     }

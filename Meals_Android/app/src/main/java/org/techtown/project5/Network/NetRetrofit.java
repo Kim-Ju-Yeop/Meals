@@ -18,7 +18,7 @@ public class NetRetrofit {
 
     Retrofit retrofit = new Retrofit.Builder()
 
-            .baseUrl("http://10.80.162.39:3000")
+            .baseUrl("http://ec2-13-209-77-143.ap-northeast-2.compute.amazonaws.com:8080/")
             .addConverterFactory(GsonConverterFactory.create()) // 파싱등록
             .build();
 
