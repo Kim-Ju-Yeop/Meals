@@ -35,10 +35,12 @@ import org.techtown.project5.Model.DTO;
 import org.techtown.project5.Network.Data;
 import org.techtown.project5.Network.NetRetrofit;
 import org.techtown.project5.Network.response.Response;
+import org.techtown.project5.Network.retrofit.interfaces.School;
 import org.techtown.project5.R;
 
 import retrofit2.Call;
 import retrofit2.Callback;
+
 
 import static org.techtown.project5.Activity.MealsActivity.check;
 
@@ -301,7 +303,6 @@ public class SchoolActivity extends AppCompatActivity {
             super.onBackPressed();
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         } else{
-
             backPressCloseHandler.onBackPressed();
         }
 

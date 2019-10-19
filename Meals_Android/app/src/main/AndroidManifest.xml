@@ -9,7 +9,8 @@
         android:icon="@drawable/meals_logo2"
         android:networkSecurityConfig="@xml/network_security_config"
         android:supportsRtl="true"
-        android:theme="@style/close">
+        android:theme="@style/close"
+        android:screenOrientation="portrait">
         <activity android:name=".Activity.IntroduceActivity"></activity>
         <activity android:name=".Activity.DevActivity" />
         <activity
