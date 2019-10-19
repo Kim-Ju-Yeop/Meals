@@ -23,7 +23,7 @@ public class IntroduceActivity extends AppCompatActivity {
         final SliderView sliderView = findViewById(R.id.imageSlider);
 
         final SliderAdapterExample adapter = new SliderAdapterExample(this);
-        adapter.setCount(3);
+        adapter.setCount(5);
 
         sliderView.setSliderAdapter(adapter);
 

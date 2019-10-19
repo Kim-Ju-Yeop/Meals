@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.smarteist.autoimageslider.SliderViewAdapter;
@@ -35,18 +34,26 @@ public class SliderAdapterExample extends
     @Override
     public void onBindViewHolder(SliderAdapterVH viewHolder, final int position) {
 
-
-        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, "This is item in position " + position, Toast.LENGTH_SHORT).show();
-            }
-        });
-
-
         switch (position) {
             case 0:
-                viewHolder.textViewDescription.setText("Meals 밀수");
+                viewHolder.textViewDescription.setTextSize(16);
+                viewHolder.textViewDescription.setTextColor(Color.WHITE);
+                viewHolder.imageGifContainer.setVisibility(View.GONE);
+                Glide.with(viewHolder.itemView)
+                        .load(R.drawable.zzero)
+                        .fitCenter()
+                        .into(viewHolder.imageViewBackground);
+                break;
+            case 1:
+                viewHolder.textViewDescription.setTextSize(16);
+                viewHolder.textViewDescription.setTextColor(Color.WHITE);
+                viewHolder.imageGifContainer.setVisibility(View.GONE);
+                Glide.with(viewHolder.itemView)
+                        .load(R.drawable.zero)
+                        .fitCenter()
+                        .into(viewHolder.imageViewBackground);
+                break;
+            case 2:
                 viewHolder.textViewDescription.setTextSize(16);
                 viewHolder.textViewDescription.setTextColor(Color.WHITE);
                 viewHolder.imageGifContainer.setVisibility(View.GONE);
@@ -55,8 +62,8 @@ public class SliderAdapterExample extends
                         .fitCenter()
                         .into(viewHolder.imageViewBackground);
                 break;
-            case 1:
-                viewHolder.textViewDescription.setText("나의 학교는 어디?");
+
+            case 3:
                 viewHolder.textViewDescription.setTextSize(16);
                 viewHolder.textViewDescription.setTextColor(Color.WHITE);
                 viewHolder.imageGifContainer.setVisibility(View.GONE);
@@ -65,8 +72,8 @@ public class SliderAdapterExample extends
                         .fitCenter()
                         .into(viewHolder.imageViewBackground);
                 break;
-            case 2:
-                viewHolder.textViewDescription.setText("오늘 급식은 뭐지?");
+
+            case 4:
                 viewHolder.textViewDescription.setTextSize(16);
                 viewHolder.textViewDescription.setTextColor(Color.WHITE);
                 viewHolder.imageGifContainer.setVisibility(View.GONE);
