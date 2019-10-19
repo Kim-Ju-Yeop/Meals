@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import org.techtown.project5.Fragment.Breakfast;
 import org.techtown.project5.Fragment.Dinner;
 import org.techtown.project5.Fragment.Lunch;
+import org.techtown.project5.R;
 
 public class Fragment_Adapter extends FragmentStatePagerAdapter {
 

@@ -6,10 +6,13 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -140,10 +143,10 @@ public class MealsActivity extends AppCompatActivity {
 
         backPressCloseHandler = new BackPressCloseHandler(this);
 
-
         String test = date.format(today);
 
         if(Integer.parseInt(test) < Integer.parseInt("20")){
+
         }
 
     }
@@ -185,6 +188,12 @@ public class MealsActivity extends AppCompatActivity {
             case R.id.developer_introduce:
 
                 Snackbar.make(getWindow().getDecorView().getRootView(), "개발자 소개 파트는 아직 준비 중입니다.", Snackbar.LENGTH_LONG).show();
+                break;
+
+            case R.id.bug_report:
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://forms.gle/rD8MAjQgVZfQ4yVv9")));
+                break;
+
         }
 
         return true;

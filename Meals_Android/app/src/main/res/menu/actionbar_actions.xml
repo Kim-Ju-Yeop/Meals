@@ -11,6 +11,10 @@
         <item
             android:id="@+id/developer_introduce"
             android:title="개발자 소개" />
+
+        <item
+            android:id="@+id/bug_report"
+            android:title="버그 및 개선사항 신고하기"/>
     </group>
 
 </menu>
