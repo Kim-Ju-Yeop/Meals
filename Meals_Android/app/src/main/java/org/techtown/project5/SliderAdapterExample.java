@@ -83,6 +83,16 @@ public class SliderAdapterExample extends
                         .into(viewHolder.imageViewBackground);
                 break;
 
+            case 5:
+                viewHolder.textViewDescription.setTextSize(16);
+                viewHolder.textViewDescription.setTextColor(Color.WHITE);
+                viewHolder.imageGifContainer.setVisibility(View.GONE);
+                Glide.with(viewHolder.itemView)
+                        .load(R.drawable.bug)
+                        .fitCenter()
+                        .into(viewHolder.imageViewBackground);
+                break;
+
         }
 
     }
