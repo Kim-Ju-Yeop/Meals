@@ -187,7 +187,10 @@ public class MealsActivity extends AppCompatActivity {
 
             case R.id.developer_introduce:
 
-                Snackbar.make(getWindow().getDecorView().getRootView(), "개발자 소개 파트는 아직 준비 중입니다.", Snackbar.LENGTH_LONG).show();
+                Intent dev_intent = new Intent(MealsActivity.this, DevActivity.class);
+                startActivity(dev_intent);
+
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
 
             case R.id.bug_report:
