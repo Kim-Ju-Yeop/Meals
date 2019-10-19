@@ -43,7 +43,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
-        android:layout_width="360dp"
+        android:layout_width="340dp"
         android:layout_height="130dp"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
@@ -54,13 +54,13 @@
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/juyeop" />
+            app:srcCompat="@drawable/juyeop2" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginLeft="20dp">
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView5"
@@ -74,33 +74,33 @@
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="Android Developer"
-                android:textSize="14dp"
-                android:layout_marginTop="8dp"/>
+                android:textSize="14dp" />
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="github : Kim-Ju-Yeop"
-                android:textStyle="bold"
-                android:textSize="14dp"
-                android:layout_marginTop="8dp"/>
+                android:textSize="12dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="blog : blog.naver.com/kjy13299"
-                android:textStyle="bold"
-                android:textSize="14dp"
-                android:layout_marginTop="8dp"/>
+                android:textSize="12dp"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 
 
     <LinearLayout
-        android:layout_width="360dp"
+        android:layout_width="340dp"
         android:layout_height="130dp"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
@@ -109,8 +109,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginRight="36dp">
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView10"
@@ -125,43 +125,43 @@
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="right"
                 android:layout_marginTop="8dp"
                 android:text="Back-End Developer"
-                android:textSize="14dp"
-                android:layout_gravity="right"/>
+                android:textSize="14dp" />
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="right"
                 android:layout_marginTop="8dp"
                 android:text="github : Choi-Jinwoo"
-                android:textSize="14dp"
-                android:textStyle="bold"
-                android:layout_gravity="right"/>
+                android:textSize="12dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="right"
                 android:layout_marginTop="8dp"
-                android:text="blog : blog.naver.com/kjy13299"
-                android:textSize="14dp"
-                android:textStyle="bold"
-                android:layout_gravity="right"/>
+                android:text="email : chlwlsdn0802@gmail.com"
+                android:textSize="12dp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="right"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/jinu"
-            android:layout_gravity="right"/>
+            app:srcCompat="@drawable/jinu" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="360dp"
+        android:layout_width="340dp"
         android:layout_height="130dp"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
@@ -172,13 +172,13 @@
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/juyeop" />
+            app:srcCompat="@drawable/hyes" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginLeft="20dp">
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView56"
@@ -192,27 +192,27 @@
                 android:id="@+id/textView78"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="Designer"
-                android:textSize="14dp"
-                android:layout_marginTop="8dp"/>
+                android:textSize="14dp" />
 
             <TextView
                 android:id="@+id/textView89"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="github : hyess210"
-                android:textStyle="bold"
-                android:textSize="14dp"
-                android:layout_marginTop="8dp"/>
+                android:textSize="12dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView98"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="blog : blog.naver.com/kjy13299"
-                android:textStyle="bold"
-                android:textSize="14dp"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginTop="8dp"
+                android:text="instagram : sunday.51"
+                android:textSize="12dp"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 

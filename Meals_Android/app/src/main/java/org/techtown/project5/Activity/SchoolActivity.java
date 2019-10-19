@@ -124,7 +124,10 @@ public class SchoolActivity extends AppCompatActivity {
         switch (item.getItemId()){
 
             case R.id.info:
-                Snackbar.make(getWindow().getDecorView().getRootView(), "밀수 애플리케이션의 설명 파트는 아직 준비 중입니다.", Snackbar.LENGTH_LONG).show();
+                Intent intent = new Intent(SchoolActivity.this, IntroduceActivity.class);
+                startActivity(intent);
+
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
 
         return true;

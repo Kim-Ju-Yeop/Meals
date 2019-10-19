@@ -7,12 +7,11 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/meals_logo2"
-        android:label="밀수"
         android:networkSecurityConfig="@xml/network_security_config"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/close">
-        <activity android:name=".Activity.DevActivity"></activity>
+        <activity android:name=".Activity.IntroduceActivity"></activity>
+        <activity android:name=".Activity.DevActivity" />
         <activity
             android:name=".Activity.MealsActivity"
             android:theme="@style/close" /> <!-- SchoolActivity -->
