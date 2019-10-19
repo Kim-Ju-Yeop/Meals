@@ -11,7 +11,7 @@ import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 
 import org.techtown.project5.R;
-import org.techtown.project5.SliderAdapterExample;
+import org.techtown.project5.FragmentAdapter.SliderAdapterExample;
 
 public class IntroduceActivity extends AppCompatActivity {
 
@@ -23,7 +23,7 @@ public class IntroduceActivity extends AppCompatActivity {
         final SliderView sliderView = findViewById(R.id.imageSlider);
 
         final SliderAdapterExample adapter = new SliderAdapterExample(this);
-        adapter.setCount(5);
+        adapter.setCount(6);
 
         sliderView.setSliderAdapter(adapter);
 
