@@ -19,7 +19,7 @@
 ## Stack
 |                      | Android 김주엽           | Server 최진우      | Design 김혜선                     |
 | -------------------- | ----------------------- | ------------------ | -------------------------------- |
-| Development Language | JAVA, RETROFIT2 | Java Script        |                                  |
+| Development Language | JAVA, RETROFIT2         |    Java Script        |                                  |
 | Development Tool     | Android Studio          | Visaul Studio Code | Adobe Illustrator, Photoshop, XD |
 
 
