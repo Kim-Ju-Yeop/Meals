@@ -32,7 +32,6 @@
 <img width="140" src="https://user-images.githubusercontent.com/49600974/67153411-8b6b9800-f323-11e9-9311-0c286e5bb3c8.png"></img>
 </div>
 
-## Demonstration Video
 
   
 
