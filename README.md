@@ -20,8 +20,18 @@
 |                      | Android 김주엽     | Server 최진우         | Design 김혜선                       |
 |:--------------------:|:---------------:|:------------------:|:--------------------------------:|
 | Development Language | JAVA, RETROFIT2 | Java Script        |                                  |
-| Development Tool     | Android Studio  | Visaul Studio Code | Adobe Illustrator, Photoshop, XD |
+| Development Tool     | Android Studio  | Visual Studio Code | Adobe Illustrator, Photoshop, XD |
 
+## UI/UX
+<div>
+![screenshot_1](https://user-images.githubusercontent.com/49600974/67153406-8ad30180-f323-11e9-8b86-cefb4cf17d15.png)
+![screenshot_2](https://user-images.githubusercontent.com/49600974/67153407-8ad30180-f323-11e9-97ba-86020c40c5bb.png)
+![screenshot_3](https://user-images.githubusercontent.com/49600974/67153408-8ad30180-f323-11e9-883f-186d2e250149.png)
+![screenshot_4](https://user-images.githubusercontent.com/49600974/67153409-8ad30180-f323-11e9-9fe1-c9d40abb51c3.png)
+![screenshot_5](https://user-images.githubusercontent.com/49600974/67153410-8b6b9800-f323-11e9-8114-8b8dc4c5b1e2.png)
+![screenshot_6](https://user-images.githubusercontent.com/49600974/67153411-8b6b9800-f323-11e9-9311-0c286e5bb3c8.png)  
+</div>
+  
 
 
 
