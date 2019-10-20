@@ -17,10 +17,11 @@
 - 이전의 종이로 된 급식 식단표와 달리 가독성과 휴대성이 좋은 Meals 밀수 애플리케이션
 
 ## Stack
-|                      | Android 김주엽             | Server 최진우         | Design 김혜선                       |
-|:--------------------:|:-----------------------:|:------------------:|:--------------------------------:|
-| Development Language | JAVA, RX JAVA, RETROFIT | Java Script        |                                  |
-| Development Tool     | Android Studio          | Visaul Studio Code | Adobe Illustrator, Photoshop, XD |
+|                      | Android 김주엽     | Server 최진우         | Design 김혜선                       |
+|:--------------------:|:---------------:|:------------------:|:--------------------------------:|
+| Development Language | JAVA, RETROFIT2 | Java Script        |                                  |
+| Development Tool     | Android Studio  | Visaul Studio Code | Adobe Illustrator, Photoshop, XD |
+
 
 
 
