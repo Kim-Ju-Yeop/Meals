@@ -33,9 +33,10 @@
 </div>
 
 ## Google Play
-<div>
-  <img src="https://user-images.githubusercontent.com/49600974/67540961-33b59e00-f722-11e9-9ead-787903667ad3.png"></img>">
-
+  - Google Play Store 2019.10.20 정식 출시를 하였습니다.
+  - Google Play <a href ="https://play.google.com/store/apps/details?id=org.techtown.project5" target ="_blank" title ="밀수 바로가기">급식-Meals 밀수 바로가기</a>
+  <img src="https://user-images.githubusercontent.com/49600974/67541131-d1a96880-f722-11e9-833d-3c4235001bfa.png"></img>">
+  
 
 
 
