@@ -34,7 +34,7 @@
 
 ## Google Play
 <div>
-  <img width="300" src="https://user-images.githubusercontent.com/49600974/67540961-33b59e00-f722-11e9-9ead-787903667ad3.png"></img>">
+  <img src="https://user-images.githubusercontent.com/49600974/67540961-33b59e00-f722-11e9-9ead-787903667ad3.png"></img>">
 
 
 
