@@ -24,19 +24,18 @@ class YesterdayViewModel : ViewModel() {
     val onBreakfastEvent = SingleLiveEvent<Unit>()
     val onLunchEvent = SingleLiveEvent<Unit>()
     val onDinnerEvent = SingleLiveEvent<Unit>()
-
     val onFailEvent = SingleLiveEvent<Unit>()
 
     var checkCount : Int = 0
 
+    // Meals Server Data
     fun getMeals(school_id : String, office_id : String){
         val res : Call<Response<Data>> = neRetrofit.meals.getYesterday(school_id, office_id)
         res.enqueue(object : Callback<Response<Data>> {
             override fun onFailure(call: Call<Response<Data>>, t: Throwable) {
-                Log.e("test", "실패")
+                Log.e("서버 통신 X", "서버 통신을 실패하였습니다.")
             }
             override fun onResponse(call: Call<Response<Data>>, response: retrofit2.Response<Response<Data>>) {
-
                 if(response.code() == 200){
                     if(response.body()?.data?.meal != null){
                         Log.e("Status[200]", "어제 급식 조회를 수행하였습니다.")
@@ -48,7 +47,6 @@ class YesterdayViewModel : ViewModel() {
                                 mealsDataList.add(response?.body()?.data?.meal!!.get(A))
                             }
                         }
-
                         for(A in 0 until mealsDataList.size){
                             if(mealsDataList.get(A).equals("null")){
                                 continue
@@ -73,6 +71,7 @@ class YesterdayViewModel : ViewModel() {
         })
     }
 
+    // Next & Back
     fun nextMeals(){
         if(checkCount == 3){
             onFailEvent.call()
@@ -86,7 +85,6 @@ class YesterdayViewModel : ViewModel() {
             }
         }
     }
-
     fun backMeals(){
         if(checkCount == 1){
             onFailEvent.call()
