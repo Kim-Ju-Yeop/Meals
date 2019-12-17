@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -46,10 +47,29 @@ class YesterDayFragment : Fragment() {
 
     fun observerViewModel(){
         with(viewModel){
-            onSuccessEvent.observe(this@YesterDayFragment, Observer {
-//                val adapter = TitleMealsAdapter(viewModel.lunchList)
-//                binding.recyclerView.adapter = adapter
+            onBreakfastEvent.observe(this@YesterDayFragment, Observer {
+                val adapter = TitleMealsAdapter(viewModel.breakfastList)
+                binding.recyclerView.adapter = adapter
                 Log.e("Success", "급식 정보를 모두 다운받았습니다.")
+
+                viewModel.checkCount = 1
+            })
+            onLunchEvent.observe(this@YesterDayFragment, Observer {
+                val adapter = TitleMealsAdapter(viewModel.lunchList)
+                binding.recyclerView.adapter = adapter
+                Log.e("Success", "급식 정보를 모두 다운받았습니다.")
+
+                viewModel.checkCount = 2
+            })
+            onDinnerEvent.observe(this@YesterDayFragment, Observer {
+                val adapter = TitleMealsAdapter(viewModel.dinnerList)
+                binding.recyclerView.adapter = adapter
+                Log.e("Success", "급식 정보를 모두 다운받았습니다.")
+
+                viewModel.checkCount = 3
+            })
+            onFailEvent.observe(this@YesterDayFragment, Observer {
+                Toast.makeText(context, "더 이상 접근할 수 없습니다.", Toast.LENGTH_SHORT)
             })
         }
     }

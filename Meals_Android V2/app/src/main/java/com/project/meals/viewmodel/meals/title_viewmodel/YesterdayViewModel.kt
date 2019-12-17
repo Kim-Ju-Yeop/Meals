@@ -1,11 +1,13 @@
 package com.project.meals.viewmodel.meals.title_viewmodel
 
 import android.util.Log
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.project.meals.network.Data
 import com.project.meals.network.NetRetrofit
 import com.project.meals.network.response.Response
 import com.project.meals.widget.SingleLiveEvent
+import io.reactivex.Single
 import retrofit2.Call
 import retrofit2.Callback
 import java.lang.NullPointerException
@@ -19,7 +21,13 @@ class YesterdayViewModel : ViewModel() {
     var lunchList = ArrayList<String>()
     var dinnerList = ArrayList<String>()
 
-    val onSuccessEvent = SingleLiveEvent<Unit>()
+    val onBreakfastEvent = SingleLiveEvent<Unit>()
+    val onLunchEvent = SingleLiveEvent<Unit>()
+    val onDinnerEvent = SingleLiveEvent<Unit>()
+
+    val onFailEvent = SingleLiveEvent<Unit>()
+
+    var checkCount : Int = 0
 
     fun getMeals(school_id : String, office_id : String){
         val res : Call<Response<Data>> = neRetrofit.meals.getYesterday(school_id, office_id)
@@ -52,8 +60,7 @@ class YesterdayViewModel : ViewModel() {
                                 }
                             }
                         }
-
-                        onSuccessEvent.call()
+                        onBreakfastEvent.call()
                     }
                 } else if(response.code() == 400){
                     Log.e("Status[400]", "검증 오류가 발생하였습니다.")
@@ -64,5 +71,20 @@ class YesterdayViewModel : ViewModel() {
                 }
             }
         })
+    }
+
+    fun nextMeals2(){
+        Log.e("test", "호출됨")
+        if(checkCount == 3){
+            onFailEvent.call()
+        }else{
+            checkCount++
+
+            when(checkCount){
+                1 -> onBreakfastEvent.call()
+                2 -> onLunchEvent.call()
+                3 -> onDinnerEvent.call()
+            }
+        }
     }
 }
