@@ -64,6 +64,7 @@ class YesterdayViewModel : ViewModel() {
                     Log.e("Status[400]", "검증 오류가 발생하였습니다.")
                 } else if(response.code() == 404){
                     Log.e("Status[404]", "급식 정보가 존재하지 않습니다.")
+                    onBreakfastEvent.call()
                 } else{
                     Log.e("Status[500]", "서버 오류가 발생하였습니다.")
                 }

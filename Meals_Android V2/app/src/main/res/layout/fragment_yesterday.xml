@@ -92,7 +92,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:orientation="vertical"
-                    android:visibility="visible">
+                    android:visibility="visible"
+                    android:layout_marginTop="25dp">
 
                     <ImageView
                         android:id="@+id/imageView2"
