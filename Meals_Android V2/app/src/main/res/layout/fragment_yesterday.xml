@@ -82,8 +82,35 @@
                     android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    tools:listitem="@layout/item_meals"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                    android:visibility="visible"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_meals" />
+
+                <LinearLayout
+                    android:id="@+id/nomeals_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="115dp"
+                        android:layout_height="115dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/question" />
+
+                    <TextView
+                        android:id="@+id/answer_textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="학교의 급식이 존재하지 않습니다."
+                        android:textSize="15dp" />
+                </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>

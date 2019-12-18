@@ -59,6 +59,14 @@ class YesterDayFragment : Fragment() {
                 val adapter = TitleMealsAdapter(viewModel.breakfastList)
                 binding.recyclerView.adapter = adapter
 
+                if(adapter.itemCount == 0){
+                    binding.nomealsLayout.visibility = View.VISIBLE
+                    binding.recyclerView.visibility = View.GONE
+                } else{
+                    binding.nomealsLayout.visibility = View.GONE
+                    binding.recyclerView.visibility = View.VISIBLE
+                }
+
                 Log.e("급식 [아침]", "아침 급식을 성공적으로 조회하였습니다.")
                 binding.mealsTextView.text = "아침"
                 viewModel.checkCount = 1
@@ -67,6 +75,14 @@ class YesterDayFragment : Fragment() {
                 val adapter = TitleMealsAdapter(viewModel.lunchList)
                 binding.recyclerView.adapter = adapter
 
+                if(adapter.itemCount == 0){
+                    binding.nomealsLayout.visibility = View.VISIBLE
+                    binding.recyclerView.visibility = View.GONE
+                } else{
+                    binding.nomealsLayout.visibility = View.GONE
+                    binding.recyclerView.visibility = View.VISIBLE
+                }
+
                 Log.e("급식 [점심]", "점심 급식을 성공적으로 조회하였습니다.")
                 binding.mealsTextView.text = "점심"
                 viewModel.checkCount = 2
@@ -74,6 +90,14 @@ class YesterDayFragment : Fragment() {
             onDinnerEvent.observe(this@YesterDayFragment, Observer {
                 val adapter = TitleMealsAdapter(viewModel.dinnerList)
                 binding.recyclerView.adapter = adapter
+
+                if(adapter.itemCount == 0){
+                    binding.nomealsLayout.visibility = View.VISIBLE
+                    binding.recyclerView.visibility = View.GONE
+                } else{
+                    binding.nomealsLayout.visibility = View.GONE
+                    binding.recyclerView.visibility = View.VISIBLE
+                }
 
                 Log.e("급식 [저녁]", "저녁 급식을 성공적으로 조회하였습니다.")
                 binding.mealsTextView.text = "저녁"

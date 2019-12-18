@@ -3,6 +3,7 @@ package com.project.meals.view.meals.title_fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.project.meals.R
@@ -21,7 +22,6 @@ class TitleMealsAdapter(val meals : ArrayList<String>) : RecyclerView.Adapter<Ti
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val viewHolder = holder
-
         viewHolder.meals_textView.text = meals.get(position)
     }
 
