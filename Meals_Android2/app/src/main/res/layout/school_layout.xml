@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:id="@+id/schoolImage"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            app:srcCompat="@drawable/school_image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/schoolName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="대구소프트웨어고등학교"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/schoolLocate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="대구광역시 달성군 구지면 창리로11길 93" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

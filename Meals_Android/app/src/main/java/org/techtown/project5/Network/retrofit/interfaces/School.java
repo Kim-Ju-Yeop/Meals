@@ -12,5 +12,4 @@ public interface School {
     @GET("/search-school")
     Call<Response<Data>> searchSchool(@Query("school_name") String SchoolName);
 
-
 }
