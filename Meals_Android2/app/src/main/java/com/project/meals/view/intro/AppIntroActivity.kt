@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.github.paolorotolo.appintro.AppIntro
 import com.project.meals.R
-import com.project.meals.view.search.SearchActivity
+import com.project.meals.view.search_school.SearchSchoolActivity
 
 class AppIntroActivity : AppIntro() {
 
@@ -26,13 +26,13 @@ class AppIntroActivity : AppIntro() {
     override fun onSkipPressed(currentFragment: Fragment?) {
         super.onSkipPressed(currentFragment)
         finish()
-        startActivity(Intent(this@AppIntroActivity, SearchActivity::class.java))
+        startActivity(Intent(this@AppIntroActivity, SearchSchoolActivity::class.java))
     }
 
     @Override
     override fun onDonePressed() {
         super.onDonePressed()
         finish()
-        startActivity(Intent(this@AppIntroActivity, SearchActivity::class.java))
+        startActivity(Intent(this@AppIntroActivity, SearchSchoolActivity::class.java))
     }
 }

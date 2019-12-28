@@ -18,7 +18,7 @@
 
         <activity android:name=".view.intro.AppIntroActivity"
                   android:theme="@style/noActionBar"/>
-        <activity android:name=".view.search.SearchActivity"
+        <activity android:name=".view.search_school.SearchSchoolActivity"
                   android:theme="@style/noActionBar"/>
 
         <activity

@@ -1,4 +1,4 @@
-package com.project.meals.view.search
+package com.project.meals.view.search_school
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,7 +9,7 @@ import com.project.meals.R
 import com.project.meals.databinding.ActivitySearchBinding
 import com.project.meals.viewmodel.SearchViewModel
 
-class SearchActivity : AppCompatActivity() {
+class SearchSchoolActivity : AppCompatActivity() {
 
     lateinit var binding : ActivitySearchBinding
     lateinit var viewModel : SearchViewModel
@@ -18,18 +18,21 @@ class SearchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
 
-        binding = DataBindingUtil.setContentView(this@SearchActivity, R.layout.activity_search)
-        viewModel = ViewModelProviders.of(this@SearchActivity).get(SearchViewModel::class.java)
+        binding = DataBindingUtil.setContentView(this@SearchSchoolActivity, R.layout.activity_search)
+        viewModel = ViewModelProviders.of(this@SearchSchoolActivity).get(SearchViewModel::class.java)
 
         binding.viewModel = viewModel
         binding.lifecycleOwner
+
+        observerViewModel()
     }
 
-    // RecyclerView Data Add
-//    fun test(){
-//        var adapter = SearchAdapter()
-//
-//        adapter.addItems(SearchInfo("김주엽고등학교", "김주엽 마음속"))
-//        binding.recyclerView.adapter = adapter
-//    }
+    fun observerViewModel(){
+        with(viewModel){
+            onSuccessEvent.observe(this@SearchSchoolActivity, Observer {
+                val adapter = SearchSchoolAdapter(viewModel.schoolDataList)
+                binding.recyclerView.adapter = adapter
+            })
+        }
+    }
 }

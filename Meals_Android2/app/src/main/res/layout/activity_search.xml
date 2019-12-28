@@ -49,7 +49,8 @@
                 android:scaleType="centerCrop"
                 android:tint="#BA68C8"
                 app:srcCompat="@drawable/search"
-                tools:ignore="VectorDrawableCompat" />
+                tools:ignore="VectorDrawableCompat"
+                android:onClick="@{()->viewModel.searchSchool()}"/>
 
             <View
                 android:id="@+id/view"
