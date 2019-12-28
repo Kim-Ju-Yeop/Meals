@@ -1,5 +1,7 @@
 package com.project.meals.view.search_school
 
+import android.content.Context
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.KeyEvent
@@ -41,6 +43,12 @@ class SearchSchoolActivity : AppCompatActivity() {
 
                 val adapter = SearchSchoolAdapter(applicationContext, viewModel.schoolDataList)
                 binding.recyclerView.adapter = adapter
+
+                val sharedPreferences : SharedPreferences = getSharedPreferences("checkLogin", Context.MODE_PRIVATE)
+                val editor : SharedPreferences.Editor = sharedPreferences.edit()
+
+                editor.putBoolean("loginData", true)
+                editor.commit()
             })
             onNoEvent.observe(this@SearchSchoolActivity, Observer {
                 binding.recyclerView.visibility = View.GONE

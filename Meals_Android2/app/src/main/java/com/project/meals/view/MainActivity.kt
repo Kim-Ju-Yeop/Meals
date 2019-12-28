@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.project.meals.R
 import com.project.meals.databinding.ActivityMainBinding
 import com.project.meals.view.intro.AppIntroActivity
+import com.project.meals.view.meals.MealsActivity
 import com.project.meals.viewmodel.MainViewModel
 
 class MainActivity : AppCompatActivity() {
@@ -38,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     fun observerViewModel(){
         with(viewModel){
             onSuccessEvent.observe(this@MainActivity, Observer {
-                // 급식 표시 화면
+                startActivity(Intent(this@MainActivity, MealsActivity::class.java))
             })
 
             onFailEvent.observe(this@MainActivity, Observer {

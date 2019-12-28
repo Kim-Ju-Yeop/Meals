@@ -3,6 +3,7 @@ package com.project.meals.view.search_school
 import android.content.Context
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
+import android.content.SharedPreferences
 import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.project.meals.R
 import com.project.meals.model.SearchSchool
 import com.project.meals.view.MainActivity
+import com.project.meals.view.meals.MealsActivity
 import kotlinx.android.synthetic.main.school_layout.view.*
 
 class SearchSchoolAdapter(val mContext : Context, val items : ArrayList<SearchSchool>) : RecyclerView.Adapter<SearchSchoolAdapter.ViewHolder>() {
@@ -30,10 +32,10 @@ class SearchSchoolAdapter(val mContext : Context, val items : ArrayList<SearchSc
         var item : SearchSchool = items.get(position)
         val listener = View.OnClickListener {
 
-            val intent = Intent(mContext, MainActivity::class.java)
+            // Intent
+            val intent = Intent(mContext, MealsActivity::class.java)
             intent.putExtra("school_id", item.school_code)
             intent.putExtra("office_id", item.office_code)
-
             mContext.startActivity(intent.addFlags(FLAG_ACTIVITY_NEW_TASK))
 
             Toast.makeText(it.context, "Clicked : ${item.school_name}", Toast.LENGTH_SHORT).show()
