@@ -3,13 +3,10 @@ package com.project.meals.viewmodel
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.google.gson.annotations.Until
 import com.project.meals.model.SearchSchool
 import com.project.meals.network.Data
 import com.project.meals.network.NetRetrofit
 import com.project.meals.network.response.Response
-import com.project.meals.view.search_school.SearchSchoolAdapter
-import com.project.meals.view.search_school.SearchSchoolInfo
 import com.project.meals.widget.SingleLiveEvent
 import retrofit2.Call
 import retrofit2.Callback
@@ -23,6 +20,8 @@ class SearchViewModel : ViewModel() {
     var schoolDataList = ArrayList<SearchSchool>()
 
     val onSuccessEvent = SingleLiveEvent<Unit>()
+    val onNoEvent = SingleLiveEvent<Unit>()
+    val onFailEvent = SingleLiveEvent<Unit>()
 
     fun searchSchool(){
         onSearch(schoolName.value.toString())
@@ -46,6 +45,15 @@ class SearchViewModel : ViewModel() {
                         }
                         onSuccessEvent.call()
                     }
+                    Log.e("status[200]", response?.body()?.message)
+                } else if(response.code() == 400){
+                    Log.e("status[400]", "학교를 입력하지 않으셨습니다.")
+                    onNoEvent.call()
+                } else if(response.code() == 404){
+                    Log.e("status[404]", "학교가 존재하지 않습니다.")
+                    onFailEvent.call()
+                } else if(response.code() == 500){
+                    Log.e("status[500]", "서버 문제가 발생하였습니다.")
                 }
             }
         })

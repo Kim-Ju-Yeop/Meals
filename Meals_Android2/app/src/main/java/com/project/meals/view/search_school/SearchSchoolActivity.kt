@@ -2,6 +2,10 @@ package com.project.meals.view.search_school
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.KeyEvent
+import android.view.View
+import android.view.inputmethod.EditorInfo
+import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -25,14 +29,41 @@ class SearchSchoolActivity : AppCompatActivity() {
         binding.lifecycleOwner
 
         observerViewModel()
+        addData()
     }
 
     fun observerViewModel(){
         with(viewModel){
             onSuccessEvent.observe(this@SearchSchoolActivity, Observer {
-                val adapter = SearchSchoolAdapter(viewModel.schoolDataList)
+
+                binding.recyclerView.visibility = View.VISIBLE
+                binding.questionLayout.visibility = View.GONE
+
+                val adapter = SearchSchoolAdapter(applicationContext, viewModel.schoolDataList)
                 binding.recyclerView.adapter = adapter
             })
+            onNoEvent.observe(this@SearchSchoolActivity, Observer {
+                binding.recyclerView.visibility = View.GONE
+                binding.questionLayout.visibility = View.VISIBLE
+
+                binding.answerTextView.text = "아직 검색된 학교 이름이 없습니다."
+            })
+            onFailEvent.observe(this@SearchSchoolActivity, Observer {
+                binding.recyclerView.visibility = View.GONE
+                binding.questionLayout.visibility = View.VISIBLE
+
+                binding.answerTextView.text = "입력하신 학교는 존재하지 않습니다."
+            })
+        }
+    }
+
+    // Keyboard Enter
+    fun addData(){
+        binding.searchSchoolEditText.setOnEditorActionListener { v, actionId, event ->
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                viewModel.searchSchool()
+            }
+            false
         }
     }
 }

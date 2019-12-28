@@ -1,5 +1,9 @@
 package com.project.meals.view.search_school
 
+import android.content.Context
+import android.content.Intent
+import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
+import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,9 +11,10 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.project.meals.R
 import com.project.meals.model.SearchSchool
+import com.project.meals.view.MainActivity
 import kotlinx.android.synthetic.main.school_layout.view.*
 
-class SearchSchoolAdapter(val items : ArrayList<SearchSchool>) : RecyclerView.Adapter<SearchSchoolAdapter.ViewHolder>() {
+class SearchSchoolAdapter(val mContext : Context, val items : ArrayList<SearchSchool>) : RecyclerView.Adapter<SearchSchoolAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         var inflater : LayoutInflater = LayoutInflater.from(parent.context)
@@ -24,6 +29,13 @@ class SearchSchoolAdapter(val items : ArrayList<SearchSchool>) : RecyclerView.Ad
 
         var item : SearchSchool = items.get(position)
         val listener = View.OnClickListener {
+
+            val intent = Intent(mContext, MainActivity::class.java)
+            intent.putExtra("school_id", item.school_code)
+            intent.putExtra("office_id", item.office_code)
+
+            mContext.startActivity(intent.addFlags(FLAG_ACTIVITY_NEW_TASK))
+
             Toast.makeText(it.context, "Clicked : ${item.school_name}", Toast.LENGTH_SHORT).show()
         }
 
@@ -37,10 +49,6 @@ class SearchSchoolAdapter(val items : ArrayList<SearchSchool>) : RecyclerView.Ad
         return items.size
     }
 
-//    fun addItems(item : SearchSchoolInfo){
-//        items.add(item)
-//    }
-//
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         var view : View = itemView
@@ -49,6 +57,10 @@ class SearchSchoolAdapter(val items : ArrayList<SearchSchool>) : RecyclerView.Ad
             itemView.schoolName.text = item.school_name
             itemView.schoolLocate.text = item.school_locate
             view.setOnClickListener(listener)
+
+            itemView.schoolName.setSingleLine(true)
+            itemView.schoolName.ellipsize = TextUtils.TruncateAt.MARQUEE
+            itemView.schoolName.isSelected = true
         }
     }
 }
