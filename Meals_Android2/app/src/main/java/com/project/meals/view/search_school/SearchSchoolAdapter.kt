@@ -32,13 +32,17 @@ class SearchSchoolAdapter(val mContext : Context, val items : ArrayList<SearchSc
         var item : SearchSchool = items.get(position)
         val listener = View.OnClickListener {
 
+            val sharedPreferences = mContext.getSharedPreferences("checkSearch", Context.MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+
+            editor.putString("school_name", item.school_name)
+            editor.putString("school_id", item.school_code)
+            editor.putString("office_id", item.office_code)
+            editor.commit()
+
             // Intent
             val intent = Intent(mContext, MealsActivity::class.java)
-            intent.putExtra("school_id", item.school_code)
-            intent.putExtra("office_id", item.office_code)
             mContext.startActivity(intent.addFlags(FLAG_ACTIVITY_NEW_TASK))
-
-            Toast.makeText(it.context, "Clicked : ${item.school_name}", Toast.LENGTH_SHORT).show()
         }
 
         holder.apply {
