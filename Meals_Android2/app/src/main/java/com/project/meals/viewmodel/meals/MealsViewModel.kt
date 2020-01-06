@@ -1,4 +1,4 @@
-package com.project.meals.viewmodel
+package com.project.meals.viewmodel.meals
 
 import androidx.lifecycle.ViewModel
 

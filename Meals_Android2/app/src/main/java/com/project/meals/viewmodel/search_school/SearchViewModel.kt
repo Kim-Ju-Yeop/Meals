@@ -1,4 +1,4 @@
-package com.project.meals.viewmodel
+package com.project.meals.viewmodel.search_school
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData

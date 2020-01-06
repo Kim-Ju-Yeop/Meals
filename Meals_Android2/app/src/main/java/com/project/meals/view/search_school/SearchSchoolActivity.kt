@@ -4,16 +4,14 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.KeyEvent
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.project.meals.R
 import com.project.meals.databinding.ActivitySearchBinding
-import com.project.meals.viewmodel.SearchViewModel
+import com.project.meals.viewmodel.search_school.SearchViewModel
 
 class SearchSchoolActivity : AppCompatActivity() {
 

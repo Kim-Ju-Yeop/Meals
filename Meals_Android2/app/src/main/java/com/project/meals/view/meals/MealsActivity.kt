@@ -10,10 +10,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.tabs.TabLayout
 import com.project.meals.R
 import com.project.meals.databinding.ActivityMealsBinding
-import com.project.meals.view.meals.title_fragment.TodayFragment
-import com.project.meals.view.meals.title_fragment.TomorrowFragment
-import com.project.meals.view.meals.title_fragment.YesterDayFragment
-import com.project.meals.viewmodel.MealsViewModel
+import com.project.meals.viewmodel.meals.MealsViewModel
 import java.text.SimpleDateFormat
 import java.util.*
 

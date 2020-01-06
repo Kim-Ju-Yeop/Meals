@@ -1,60 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.meals.title_fragment.TomorrowFragment">
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.project.meals.viewmodel.meals.title_viewmodel.YesterdayViewModel" />
+    </data>
 
     <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="340dp"
-        android:layout_gravity="center"
-        android:background="#F5F5F5"
-        android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:context=".view.meals.title_fragment.TomorrowFragment">
 
-        <TextView
-            android:id="@+id/breakfast"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
             android:gravity="center"
-            android:text="아침"
-            android:textColor="#B06AB3"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:orientation="vertical">
 
-        <View
-            android:id="@+id/view2"
-            android:layout_width="40dp"
-            android:layout_height="2dp"
-            android:layout_gravity="center"
-            android:background="#B06AB3" />
-
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:text="2019.09.23"
-            android:textSize="12sp" />
+            <ImageButton
+                android:id="@+id/imageView10"
+                android:scaleType="centerCrop"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_chevron_left_black_24dp"
+                android:tint="#B06AB3"/>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="25dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:background="#F3F3F3"
             android:orientation="vertical">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
+            <TextView
+                android:id="@+id/breakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="아침"
+                android:textColor="#B06AB3"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:background="#B06AB3" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="2019.09.23"
+                android:textSize="12sp" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="15dp" />
+                android:layout_marginTop="25dp"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/item_meals" />
+            </LinearLayout>
+
         </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-</FrameLayout>
+            <ImageButton
+                android:scaleType="centerCrop"
+                android:background="@android:color/transparent"
+                android:id="@+id/imageView11"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_chevron_right_black_24dp"
+                android:tint="#B06AB3"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
