@@ -31,7 +31,7 @@ class YesterdayViewModel : ViewModel() {
 
                 if(response.code() == 200){
                     if(response.body()?.data?.meal != null){
-                        Log.e("Status[200]", "어제 급식 조회를 성공하였습니다.")
+                        Log.e("Status[200]", "어제 급식 조회를 수행하였습니다.")
 
                         for(A in 0 until response?.body()?.data?.meal?.size!!){
                             if(response?.body()?.data?.meal!!.get(A) == null){
