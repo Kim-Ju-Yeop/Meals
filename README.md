@@ -38,7 +38,7 @@
   
 ## Naver Blog
   - Naver Blog에 밀수 애플리케이션에 대한 자세한 설명을 해두었습니다.
-  - Naver Blog <a href ="http://kjy13299.blog.me/221686185631" target ="_blank" title ="Naver Blog 밀수 바로가기">Naver Blog 밀수 바로가기 </a>
+  - Naver Blog <a href ="http://kjy13299.blog.me/221686185631" target ="_blank" title ="Meals 밀수 설명보기">Meals 밀수 설명보기 </a>
  
   
 
