@@ -73,12 +73,25 @@ class YesterdayViewModel : ViewModel() {
         })
     }
 
-    fun nextMeals2(){
-        Log.e("test", "호출됨")
+    fun nextMeals(){
         if(checkCount == 3){
             onFailEvent.call()
         }else{
             checkCount++
+
+            when(checkCount){
+                1 -> onBreakfastEvent.call()
+                2 -> onLunchEvent.call()
+                3 -> onDinnerEvent.call()
+            }
+        }
+    }
+
+    fun backMeals(){
+        if(checkCount == 1){
+            onFailEvent.call()
+        } else{
+            checkCount--
 
             when(checkCount){
                 1 -> onBreakfastEvent.call()

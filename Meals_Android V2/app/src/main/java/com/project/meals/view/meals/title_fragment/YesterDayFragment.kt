@@ -30,11 +30,13 @@ class YesterDayFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_yesterday, container, false)
         viewModel = ViewModelProviders.of(this@YesterDayFragment).get(YesterdayViewModel::class.java)
 
+        binding.viewModel = viewModel
+        binding.lifecycleOwner
 
         getData()
         viewModel.getMeals(school_id, office_id)
-        observerViewModel()
 
+        observerViewModel()
         return binding.root
     }
 
@@ -50,26 +52,31 @@ class YesterDayFragment : Fragment() {
             onBreakfastEvent.observe(this@YesterDayFragment, Observer {
                 val adapter = TitleMealsAdapter(viewModel.breakfastList)
                 binding.recyclerView.adapter = adapter
-                Log.e("Success", "급식 정보를 모두 다운받았습니다.")
+                Log.e("급식 [아침]", "아침 급식을 성공적으로 조회하였습니다.")
+                binding.mealsTextView.text = "아침"
 
                 viewModel.checkCount = 1
             })
             onLunchEvent.observe(this@YesterDayFragment, Observer {
                 val adapter = TitleMealsAdapter(viewModel.lunchList)
                 binding.recyclerView.adapter = adapter
-                Log.e("Success", "급식 정보를 모두 다운받았습니다.")
+                binding.mealsTextView.text = "점심"
+
+                Log.e("급식 [점심]", "점심 급식을 성공적으로 조회하였습니다.")
 
                 viewModel.checkCount = 2
             })
             onDinnerEvent.observe(this@YesterDayFragment, Observer {
                 val adapter = TitleMealsAdapter(viewModel.dinnerList)
                 binding.recyclerView.adapter = adapter
-                Log.e("Success", "급식 정보를 모두 다운받았습니다.")
+                binding.mealsTextView.text = "저녁"
+
+                Log.e("급식 [저녁]", "저녁 급식을 성공적으로 조회하였습니다.")
 
                 viewModel.checkCount = 3
             })
             onFailEvent.observe(this@YesterDayFragment, Observer {
-                Toast.makeText(context, "더 이상 접근할 수 없습니다.", Toast.LENGTH_SHORT)
+                Toast.makeText(context, "더 이상 넘어갈 수 없습니다.", Toast.LENGTH_SHORT).show()
             })
         }
     }

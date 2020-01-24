@@ -23,13 +23,14 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/imageView50"
+                android:id="@+id/back"
                 android:scaleType="centerCrop"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@android:color/transparent"
                 android:src="@drawable/ic_chevron_left_black_24dp"
-                android:tint="#B06AB3"/>
+                android:tint="#B06AB3"
+                android:onClick="@{() -> viewModel.backMeals()}"/>
         </LinearLayout>
 
         <LinearLayout
@@ -44,7 +45,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/breakfast"
+                android:id="@+id/meals_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -92,17 +93,17 @@
             android:layout_height="match_parent"
             android:layout_marginRight="15dp"
             android:gravity="center"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <ImageButton
                 android:scaleType="centerCrop"
                 android:background="@android:color/transparent"
-                android:id="@+id/imageView11"
+                android:id="@+id/next"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/ic_chevron_right_black_24dp"
-                android:tint="#B06AB3" />
+                android:tint="#B06AB3"
+                android:onClick="@{()->viewModel.nextMeals()}"/>
         </LinearLayout>
     </LinearLayout>
 </layout>
