@@ -57,7 +57,7 @@
                 android:textStyle="bold" />
 
             <View
-                android:id="@+id/view2"
+                android:id="@+id/view3"
                 android:layout_width="40dp"
                 android:layout_height="2dp"
                 android:layout_gravity="center"
