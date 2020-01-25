@@ -96,7 +96,7 @@
                     android:layout_marginTop="25dp">
 
                     <ImageView
-                        android:id="@+id/imageView2"
+                        android:id="@+id/imageView22"
                         android:layout_width="115dp"
                         android:layout_height="115dp"
                         android:layout_gravity="center"
