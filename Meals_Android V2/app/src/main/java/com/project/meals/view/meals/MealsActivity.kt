@@ -1,25 +1,31 @@
 package com.project.meals.view.meals
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.text.TextUtils
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.tabs.TabLayout
 import com.project.meals.R
 import com.project.meals.databinding.ActivityMealsBinding
+import com.project.meals.view.base.BaseActivity
+import com.project.meals.view.search_school.SearchSchoolActivity
 import com.project.meals.viewmodel.meals.MealsViewModel
 import java.text.SimpleDateFormat
 import java.util.*
 
-class MealsActivity : AppCompatActivity() {
+
+class MealsActivity : BaseActivity() {
 
     lateinit var binding : ActivityMealsBinding
     lateinit var viewModel : MealsViewModel
-
-    lateinit var timer : CountDownTimer
 
     lateinit var school_name : String
     lateinit var school_id : String
@@ -37,7 +43,8 @@ class MealsActivity : AppCompatActivity() {
 
         checkData()
         setTab()
-        setTime()
+        setTime(binding.timer)
+        setToolbar(binding.toolbar)
     }
 
     fun checkData(){
@@ -65,38 +72,33 @@ class MealsActivity : AppCompatActivity() {
         binding.viewPager.adapter = mealsAdapter
 
         binding.viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(binding.layoutTab))
-
         binding.layoutTab.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                binding.viewPager.setCurrentItem(tab!!.position)
-            }
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-
-            }
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-
-            }
+            override fun onTabSelected(tab: TabLayout.Tab?) = binding.viewPager.setCurrentItem(tab!!.position)
+            override fun onTabUnselected(tab: TabLayout.Tab?){}
+            override fun onTabReselected(tab: TabLayout.Tab?){}
         })
     }
 
-    // Timer Setting
-    fun setTime(){
-        timer = object : CountDownTimer((10*1000), 1000){
-            override fun onTick(millisUntilFinished: Long) {
-                binding.timer.text = getTime()
+    // Toolbar Setting
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val menuInflater : MenuInflater = menuInflater
+        menuInflater.inflate(R.menu.meals_item, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.search_school ->{
+                startActivity(Intent(this@MealsActivity, SearchSchoolActivity::class.java))
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
             }
-            override fun onFinish() {
-                timer.cancel()
-                timer.start()
+            R.id.bug_report ->{
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://forms.gle/rD8MAjQgVZfQ4yVv9")))
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+            }
+            R.id.developer_introduce ->{
+                // Developer 소개 페이지 이동
             }
         }
-        timer.start()
-    }
-    fun getTime() : String{
-        var mFormat = SimpleDateFormat("kk : mm : ss a", Locale.KOREA)
-        val mNow = System.currentTimeMillis()
-        val mDate = Date(mNow)
-
-        return mFormat.format(mDate)
+        return super.onOptionsItemSelected(item)
     }
 }

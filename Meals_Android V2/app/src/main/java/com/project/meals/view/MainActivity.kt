@@ -10,11 +10,12 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.project.meals.R
 import com.project.meals.databinding.ActivityMainBinding
+import com.project.meals.view.base.BaseActivity
 import com.project.meals.view.intro.AppIntroActivity
 import com.project.meals.view.meals.MealsActivity
 import com.project.meals.viewmodel.MainViewModel
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     lateinit var binding : ActivityMainBinding
     lateinit var viewModel : MainViewModel
@@ -42,7 +43,6 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(this@MainActivity, MealsActivity::class.java))
                 finish()
             })
-
             onFailEvent.observe(this@MainActivity, Observer {
                 startActivity(Intent(this@MainActivity, AppIntroActivity::class.java))
                 finish()

@@ -6,13 +6,9 @@ import android.os.Bundle
 import android.os.Handler
 import com.project.meals.R
 import com.project.meals.view.MainActivity
+import com.project.meals.view.base.BaseActivity
 
-class SplashActivity : AppCompatActivity() {
-
-    /**
-     * Splash_Time
-     * 단위의 체계에서 1000 이 1초를 의미한다.
-     */
+class SplashActivity : BaseActivity() {
 
     val SPLASH_TIME : Long = 1900
 

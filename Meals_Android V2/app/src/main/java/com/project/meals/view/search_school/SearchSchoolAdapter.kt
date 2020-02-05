@@ -51,7 +51,7 @@ class SearchSchoolAdapter(val mContext : Context, val items : ArrayList<SearchSc
             val intent = Intent(mContext, MealsActivity::class.java)
             mContext.startActivity(intent.addFlags(FLAG_ACTIVITY_NEW_TASK))
             (mContext as Activity).overridePendingTransition(R.anim.loadfadein, R.anim.loadfadeout)
-            (mContext as Activity).finish()
+            mContext.finish()
         }
 
         holder.apply {

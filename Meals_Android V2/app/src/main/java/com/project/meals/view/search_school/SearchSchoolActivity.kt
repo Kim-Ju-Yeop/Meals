@@ -11,9 +11,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.project.meals.R
 import com.project.meals.databinding.ActivitySearchBinding
+import com.project.meals.view.base.BaseActivity
 import com.project.meals.viewmodel.search_school.SearchViewModel
 
-class SearchSchoolActivity : AppCompatActivity() {
+class SearchSchoolActivity : BaseActivity() {
 
     lateinit var binding : ActivitySearchBinding
     lateinit var viewModel : SearchViewModel
@@ -65,5 +66,10 @@ class SearchSchoolActivity : AppCompatActivity() {
             }
             false
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
     }
 }
