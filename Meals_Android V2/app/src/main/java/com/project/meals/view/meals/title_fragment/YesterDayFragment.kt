@@ -15,20 +15,18 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.project.meals.R
 import com.project.meals.databinding.FragmentYesterdayBinding
+import com.project.meals.view.base.BaseFragment
 import com.project.meals.viewmodel.meals.title_viewmodel.YesterdayViewModel
 import java.text.SimpleDateFormat
 import java.util.*
 
-class YesterDayFragment : Fragment() {
+class YesterDayFragment : BaseFragment() {
 
     lateinit var binding : FragmentYesterdayBinding
     lateinit var viewModel : YesterdayViewModel
 
     lateinit var school_id : String
     lateinit var office_id : String
-
-    var today = Date()
-    var simpleDateFormat = SimpleDateFormat("yyyy.MM.dd")
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -41,6 +39,8 @@ class YesterDayFragment : Fragment() {
         getData() // GetSchoolData
         viewModel.getMeals(school_id, office_id) // MealsServerData
 
+        mCalendar.add(Calendar.DAY_OF_WEEK, -1)
+        today = mCalendar.time
         binding.date.text = simpleDateFormat.format(today)
 
         observerViewModel()

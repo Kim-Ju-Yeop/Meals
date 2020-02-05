@@ -54,7 +54,7 @@
                 android:text="아침"
                 android:textColor="#B06AB3"
                 android:textSize="25sp"
-                android:textStyle="bold" />
+                android:fontFamily="@font/nanum_extrabold"/>
 
             <View
                 android:id="@+id/view3"
@@ -70,7 +70,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
                 android:text="2019.09.23"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:fontFamily="@font/nanum_bold"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -109,7 +110,8 @@
                         android:layout_marginTop="10dp"
                         android:gravity="center"
                         android:text="학교의 급식이 존재하지 않습니다."
-                        android:textSize="15dp" />
+                        android:textSize="15dp"
+                        android:fontFamily="@font/nanum_bold"/>
                 </LinearLayout>
 
             </LinearLayout>

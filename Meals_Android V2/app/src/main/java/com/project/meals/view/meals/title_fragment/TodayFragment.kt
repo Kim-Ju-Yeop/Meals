@@ -12,21 +12,19 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import com.project.meals.R
 import com.project.meals.databinding.FragmentTodayBinding
+import com.project.meals.view.base.BaseFragment
 import com.project.meals.viewmodel.meals.title_viewmodel.TodayViewModel
 import com.project.meals.viewmodel.meals.title_viewmodel.YesterdayViewModel
 import java.text.SimpleDateFormat
 import java.util.*
 
-class TodayFragment : Fragment() {
+class TodayFragment : BaseFragment() {
 
     lateinit var binding : FragmentTodayBinding
     lateinit var viewModel : TodayViewModel
 
     lateinit var school_id : String
     lateinit var office_id : String
-
-    var today = Date()
-    var simpleDateFormat = SimpleDateFormat("yyyy.MM.dd")
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -36,10 +34,10 @@ class TodayFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner
 
-
         getData() // GetSchoolData
         viewModel.getMeals(school_id, office_id) // MealsServerData
 
+        today = mCalendar.time
         binding.date.text = simpleDateFormat.format(today)
 
         observerViewModel()

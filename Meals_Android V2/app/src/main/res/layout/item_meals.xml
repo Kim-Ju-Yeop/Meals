@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="현미 간장밥"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:fontFamily="@font/nanum_bold"/>
 
 </LinearLayout>

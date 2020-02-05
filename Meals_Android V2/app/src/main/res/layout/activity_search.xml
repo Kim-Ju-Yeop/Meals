@@ -28,7 +28,7 @@
                 android:text="학교 검색"
                 android:textColor="#FFFFFF"
                 android:textSize="25sp"
-                android:textStyle="normal" />
+                android:fontFamily="@font/nanum_extrabold"/>
         </LinearLayout>
 
         <LinearLayout
@@ -70,7 +70,8 @@
                 android:inputType="textPersonName"
                 android:paddingLeft="8dp"
                 android:textSize="16sp"
-                android:text="@={viewModel.schoolName}"/>
+                android:text="@={viewModel.schoolName}"
+                android:fontFamily="@font/nanum_bold"/>
 
         </LinearLayout>
 
@@ -111,7 +112,8 @@
                     android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:text="아직 검색된 학교 이름이 없습니다."
-                    android:textSize="15dp" />
+                    android:textSize="15dp"
+                    android:fontFamily="@font/nanum_bold"/>
             </LinearLayout>
 
         </LinearLayout>
