@@ -40,10 +40,12 @@ class MainActivity : AppCompatActivity() {
         with(viewModel){
             onSuccessEvent.observe(this@MainActivity, Observer {
                 startActivity(Intent(this@MainActivity, MealsActivity::class.java))
+                finish()
             })
 
             onFailEvent.observe(this@MainActivity, Observer {
                 startActivity(Intent(this@MainActivity, AppIntroActivity::class.java))
+                finish()
             })
         }
     }

@@ -39,14 +39,8 @@ class SearchSchoolActivity : AppCompatActivity() {
                 binding.recyclerView.visibility = View.VISIBLE
                 binding.questionLayout.visibility = View.GONE
 
-                val adapter = SearchSchoolAdapter(applicationContext, viewModel.schoolDataList)
+                val adapter = SearchSchoolAdapter(this@SearchSchoolActivity, viewModel.schoolDataList)
                 binding.recyclerView.adapter = adapter
-
-                val sharedPreferences : SharedPreferences = getSharedPreferences("checkLogin", Context.MODE_PRIVATE)
-                val editor : SharedPreferences.Editor = sharedPreferences.edit()
-
-                editor.putBoolean("loginData", true)
-                editor.commit()
             })
             onNoEvent.observe(this@SearchSchoolActivity, Observer {
                 binding.recyclerView.visibility = View.GONE

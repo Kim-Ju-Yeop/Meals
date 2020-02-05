@@ -1,5 +1,6 @@
 package com.project.meals.view.search_school
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
@@ -40,9 +41,17 @@ class SearchSchoolAdapter(val mContext : Context, val items : ArrayList<SearchSc
             editor.putString("office_id", item.office_code)
             editor.commit()
 
+            val sharedPreferences2 : SharedPreferences = mContext.getSharedPreferences("checkLogin", Context.MODE_PRIVATE)
+            val editor2 = sharedPreferences2.edit()
+
+            editor2.putBoolean("loginData", true)
+            editor2.commit()
+
             // Intent
             val intent = Intent(mContext, MealsActivity::class.java)
             mContext.startActivity(intent.addFlags(FLAG_ACTIVITY_NEW_TASK))
+            (mContext as Activity).overridePendingTransition(R.anim.loadfadein, R.anim.loadfadeout)
+            (mContext as Activity).finish()
         }
 
         holder.apply {

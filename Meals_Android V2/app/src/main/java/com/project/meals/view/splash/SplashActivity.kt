@@ -22,6 +22,7 @@ class SplashActivity : AppCompatActivity() {
 
         Handler().postDelayed({
             startActivity(Intent(this, MainActivity::class.java))
+            overridePendingTransition(R.anim.loadfadein, R.anim.loadfadeout)
             finish()
         }, SPLASH_TIME)
     }
