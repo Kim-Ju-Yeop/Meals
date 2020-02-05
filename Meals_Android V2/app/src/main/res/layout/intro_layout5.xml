@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:text="여러분의 일상에 편리한 급식 앱 밀수를 더해보세요!"
+        android:text="일상에 편리한 급식 앱 밀수를 더해보세요!"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold"
