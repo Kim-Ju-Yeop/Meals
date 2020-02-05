@@ -9,10 +9,6 @@
         <item
             android:id="@+id/bug_report"
             android:title="버그 및 개선사항 신고하기"/>
-
-        <item
-            android:id="@+id/developer_introduce"
-            android:title="앱 개발자 알아보기"/>
     </group>
 
 </menu>

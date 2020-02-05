@@ -95,9 +95,6 @@ class MealsActivity : BaseActivity() {
                 startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://forms.gle/rD8MAjQgVZfQ4yVv9")))
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
             }
-            R.id.developer_introduce ->{
-                // Developer 소개 페이지 이동
-            }
         }
         return super.onOptionsItemSelected(item)
     }

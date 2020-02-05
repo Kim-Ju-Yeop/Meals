@@ -11,7 +11,8 @@
         android:id="@+id/imageView"
         android:layout_width="224dp"
         android:layout_height="413dp"
-        app:srcCompat="@drawable/intro5" />
+        app:srcCompat="@drawable/meals_logo"
+        android:tint="#FFFFFF"/>
 
     <TextView
         android:id="@+id/textView"
@@ -19,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
-        android:text="4. 개발자들을 만나보세요"
+        android:text="이제는 함께 하세요"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         app:fontFamily="@font/nanum_extrabold" />
@@ -30,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:text="앱을 개발한 학생이 궁금하다면 알아보세요!"
+        android:text="여러분의 일상에 편리한 급식 앱 밀수를 더해보세요!"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold"
