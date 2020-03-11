@@ -22,7 +22,7 @@
 | Development Language | JAVA, RETROFIT2 | Java Script        |                                  |
 | Development Tool     | Android Studio  | Visual Studio Code | Adobe Illustrator, Photoshop, XD |
 
-## UI/UX
+## V1.UI/UX
 <div>
 <img width="140" src="https://user-images.githubusercontent.com/49600974/67153406-8ad30180-f323-11e9-8b86-cefb4cf17d15.png"></img>
 <img width="140" src="https://user-images.githubusercontent.com/49600974/67153407-8ad30180-f323-11e9-97ba-86020c40c5bb.png"></img>
@@ -30,6 +30,15 @@
 <img width="140" src="https://user-images.githubusercontent.com/49600974/67153409-8ad30180-f323-11e9-9fe1-c9d40abb51c3.png"></img>
 <img width="140" src="https://user-images.githubusercontent.com/49600974/67153410-8b6b9800-f323-11e9-8114-8b8dc4c5b1e2.png"></img>
 <img width="140" src="https://user-images.githubusercontent.com/49600974/67153411-8b6b9800-f323-11e9-9311-0c286e5bb3c8.png"></img>
+</div>
+
+## V2.UI/UX
+<div>
+<img width="140" src="https://user-images.githubusercontent.com/49600974/76450754-a8f3e800-6411-11ea-9703-6aaea7c6feec.png"></img>
+<img width="140" src="https://user-images.githubusercontent.com/49600974/76450743-a42f3400-6411-11ea-9098-f47efdc6e053.png"></img>
+<img width="140" src="https://user-images.githubusercontent.com/49600974/76450745-a4c7ca80-6411-11ea-9941-e398638974c5.png"></img>
+<img width="140" src="https://user-images.githubusercontent.com/49600974/76450696-911c6400-6411-11ea-96fb-ae83dff5cd3d.png"></img>
+<img width="140" src="https://user-images.githubusercontent.com/49600974/76450729-9ed1e980-6411-11ea-88f0-15111dafcd8f.png">
 </div>
 
 ## Google Play
