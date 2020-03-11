@@ -103,9 +103,6 @@ class TomorrowFragment : BaseFragment() {
                 binding.mealsTextView.text = "저녁"
                 viewModel.checkCount = 3
             })
-            onFailEvent.observe(this@TomorrowFragment, androidx.lifecycle.Observer {
-                Toast.makeText(context, "더 이상 넘어갈 수 없습니다.", Toast.LENGTH_SHORT).show()
-            })
         }
     }
 }

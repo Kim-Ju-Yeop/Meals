@@ -55,8 +55,7 @@ class TodayViewModel : BaseViewModel() {
 
     // Next & Back
     fun nextMeals(){
-        if(checkCount == 3) onFailEvent.call()
-        else{
+        if(checkCount != 3){
             checkCount++
             when(checkCount){
                 1 -> onBreakfastEvent.call()
@@ -65,9 +64,9 @@ class TodayViewModel : BaseViewModel() {
             }
         }
     }
+
     fun backMeals(){
-        if(checkCount == 1) onFailEvent.call()
-        else{
+        if(checkCount != 1){
             checkCount--
             when(checkCount){
                 1 -> onBreakfastEvent.call()
