@@ -32,13 +32,6 @@
 <img width="140" src="https://user-images.githubusercontent.com/49600974/67153411-8b6b9800-f323-11e9-9311-0c286e5bb3c8.png"></img>
 </div>
 
-## V1. Google Play
-  - Google Play Store 2019.10.20 정식 출시를 하였습니다.
-  
-## V1. Naver Blog
-  - Naver Blog에 밀수 애플리케이션에 대한 자세한 설명을 해두었습니다.
-  - Naver Blog <a href ="http://kjy13299.blog.me/221686185631" target ="_blank" title ="Meals 밀수 설명보기">Meals 밀수 설명보기 </a>
- 
 ## V2. UI/UX
 <div>
 <img width="168" src="https://user-images.githubusercontent.com/49600974/76450754-a8f3e800-6411-11ea-9703-6aaea7c6feec.png"></img>
@@ -47,7 +40,13 @@
 <img width="168" src="https://user-images.githubusercontent.com/49600974/76450696-911c6400-6411-11ea-96fb-ae83dff5cd3d.png"></img>
 <img width="168" src="https://user-images.githubusercontent.com/49600974/76450729-9ed1e980-6411-11ea-88f0-15111dafcd8f.png">
 </div> 
+
+## V1. Google Play
+  - Google Play Store 2019.10.20 정식 출시를 하였습니다.
   
+## V1. Naver Blog
+  - Naver Blog에 밀수 애플리케이션에 대한 자세한 설명을 해두었습니다.
+  - Naver Blog <a href ="http://kjy13299.blog.me/221686185631" target ="_blank" title ="Meals 밀수 설명보기">Meals 밀수 설명보기 </a>
 
 
 
