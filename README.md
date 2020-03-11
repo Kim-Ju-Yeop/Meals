@@ -34,11 +34,11 @@
 
 ## V2.UI/UX
 <div>
-<img width="140" src="https://user-images.githubusercontent.com/49600974/76450754-a8f3e800-6411-11ea-9703-6aaea7c6feec.png"></img>
-<img width="140" src="https://user-images.githubusercontent.com/49600974/76450743-a42f3400-6411-11ea-9098-f47efdc6e053.png"></img>
-<img width="140" src="https://user-images.githubusercontent.com/49600974/76450745-a4c7ca80-6411-11ea-9941-e398638974c5.png"></img>
-<img width="140" src="https://user-images.githubusercontent.com/49600974/76450696-911c6400-6411-11ea-96fb-ae83dff5cd3d.png"></img>
-<img width="140" src="https://user-images.githubusercontent.com/49600974/76450729-9ed1e980-6411-11ea-88f0-15111dafcd8f.png">
+<img width="168" src="https://user-images.githubusercontent.com/49600974/76450754-a8f3e800-6411-11ea-9703-6aaea7c6feec.png"></img>
+<img width="168" src="https://user-images.githubusercontent.com/49600974/76450743-a42f3400-6411-11ea-9098-f47efdc6e053.png"></img>
+<img width="168" src="https://user-images.githubusercontent.com/49600974/76450745-a4c7ca80-6411-11ea-9941-e398638974c5.png"></img>
+<img width="168" src="https://user-images.githubusercontent.com/49600974/76450696-911c6400-6411-11ea-96fb-ae83dff5cd3d.png"></img>
+<img width="168" src="https://user-images.githubusercontent.com/49600974/76450729-9ed1e980-6411-11ea-88f0-15111dafcd8f.png">
 </div>
 
 ## Google Play
