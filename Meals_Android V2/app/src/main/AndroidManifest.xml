@@ -6,7 +6,6 @@
     package="com.project.meals">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <dist:module dist:instant="true" />
 
     <application
@@ -19,7 +18,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
 
-        <activity android:name=".view.meals.MealsActivity"
+        <activity
+            android:name=".view.meals.MealsActivity"
             android:theme="@style/noActionBar"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"></activity>
@@ -48,5 +48,4 @@
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"/>
     </application>
-
 </manifest>

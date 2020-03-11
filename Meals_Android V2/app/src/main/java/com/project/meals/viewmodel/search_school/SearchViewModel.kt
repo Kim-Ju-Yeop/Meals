@@ -2,11 +2,9 @@ package com.project.meals.viewmodel.search_school
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.project.meals.model.SearchSchool
+import com.project.meals.DTO.SearchSchool
 import com.project.meals.network.Data
-import com.project.meals.network.NetRetrofit
-import com.project.meals.network.response.Response
+import com.project.meals.network.Response
 import com.project.meals.viewmodel.base.BaseViewModel
 import com.project.meals.widget.SingleLiveEvent
 import retrofit2.Call

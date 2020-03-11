@@ -1,7 +1,7 @@
 package com.project.meals.network.retrofit.interfaces
 
 import com.project.meals.network.Data
-import com.project.meals.network.response.Response
+import com.project.meals.network.Response
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

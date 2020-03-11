@@ -1,13 +1,9 @@
 package com.project.meals.viewmodel.meals.title_viewmodel
 
-import android.util.Base64
 import android.util.Log
-import androidx.lifecycle.ViewModel
 import com.project.meals.network.Data
-import com.project.meals.network.NetRetrofit
-import com.project.meals.network.response.Response
+import com.project.meals.network.Response
 import com.project.meals.viewmodel.base.BaseViewModel
-import com.project.meals.widget.SingleLiveEvent
 import retrofit2.Call
 import retrofit2.Callback
 

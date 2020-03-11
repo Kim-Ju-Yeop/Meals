@@ -9,11 +9,9 @@ import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.project.meals.R
-import com.project.meals.model.SearchSchool
-import com.project.meals.view.MainActivity
+import com.project.meals.DTO.SearchSchool
 import com.project.meals.view.meals.MealsActivity
 import kotlinx.android.synthetic.main.school_layout.view.*
 
