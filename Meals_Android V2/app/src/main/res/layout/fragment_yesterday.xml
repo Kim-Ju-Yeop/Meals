@@ -6,14 +6,14 @@
     <data>
         <variable
             name="viewModel"
-            type="com.project.meals.viewmodel.meals.title_viewmodel.YesterdayViewModel" />
+            type="org.techtown.project5.viewmodel.meals.title_viewmodel.YesterdayViewModel" />
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        tools:context=".view.meals.title_fragment.TomorrowFragment">
+        tools:context="org.techtown.project5.view.meals.title_fragment.TomorrowFragment">
 
         <LinearLayout
             android:layout_width="wrap_content"

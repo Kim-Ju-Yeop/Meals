@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.project.meals.viewmodel.meals.MealsViewModel" />
+            type="org.techtown.project5.viewmodel.meals.MealsViewModel" />
     </data>
 
     <LinearLayout
