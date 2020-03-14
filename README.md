@@ -41,16 +41,14 @@
 <img width="168" src="https://user-images.githubusercontent.com/49600974/76675875-7f99ae80-6601-11ea-8e28-7be7ae057d0c.png">
 </div> 
 
-## V1. Google Play
-  - Google Play Store 2019.10.20 정식 출시를 하였습니다.
-
-## V2. Google Play
-  - Google Play Store 2020.03.14 정식 출시를 하였습니다.
+## Google Play
+  - Google Play Store 2019.10.20 1차 버전을 출시하였습니다.
+  - Google Play Store 2020.03.14 2차 버전을 출시하였습니다.
   - Google Play Store <a href ="https://play.google.com/store/apps/details?id=org.techtown.project5" target ="_blank" title ="Meals 밀수 사용하기">Meals 밀수 사용하기</a>
 
-## V1. Naver Blog
+## Naver Blog
   - Naver Blog에 밀수 애플리케이션에 대한 자세한 설명을 해두었습니다.
-  - Naver Blog <a href ="http://kjy13299.blog.me/221686185631" target ="_blank" title ="Meals 밀수 설명보기">Meals 밀수 설명보기 </a>
+  - Naver Blog <a href ="http://kjy13299.blog.me/221686185631" target ="_blank" title ="Meals 밀수 설명보기">1차 버전 Meals 밀수 설명보기 </a>
 
 
 
