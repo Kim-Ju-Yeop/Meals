@@ -36,9 +36,9 @@
 <div>
 <img width="168" src="https://user-images.githubusercontent.com/49600974/76450754-a8f3e800-6411-11ea-9703-6aaea7c6feec.png"></img>
 <img width="168" src="https://user-images.githubusercontent.com/49600974/76450743-a42f3400-6411-11ea-9098-f47efdc6e053.png"></img>
-<img width="168" src="https://user-images.githubusercontent.com/49600974/76450745-a4c7ca80-6411-11ea-9941-e398638974c5.png"></img>
-<img width="168" src="https://user-images.githubusercontent.com/49600974/76450696-911c6400-6411-11ea-96fb-ae83dff5cd3d.png"></img>
-<img width="168" src="https://user-images.githubusercontent.com/49600974/76450729-9ed1e980-6411-11ea-88f0-15111dafcd8f.png">
+<img width="168" src="https://user-images.githubusercontent.com/49600974/76675877-81637200-6601-11ea-9d06-bb37c57330f5.png"></img>
+<img width="168" src="https://user-images.githubusercontent.com/49600974/76675873-76a8dd00-6601-11ea-829e-2ff6aa9c08d2.png"></img>
+<img width="168" src="https://user-images.githubusercontent.com/49600974/76675875-7f99ae80-6601-11ea-8e28-7be7ae057d0c.png">
 </div> 
 
 ## V1. Google Play
