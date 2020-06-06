@@ -3,6 +3,9 @@ package org.techtown.project5.viewmodel.base
 import androidx.lifecycle.ViewModel
 import org.techtown.project5.network.NetRetrofit
 import org.techtown.project5.widget.SingleLiveEvent
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 open class BaseViewModel : ViewModel(){
 
@@ -25,4 +28,7 @@ open class BaseViewModel : ViewModel(){
     val onDinnerEvent = SingleLiveEvent<Unit>()
 
     var checkCount : Int = 0
+
+    val date = Date()
+    val simpleDateFormat = SimpleDateFormat("HH")
 }

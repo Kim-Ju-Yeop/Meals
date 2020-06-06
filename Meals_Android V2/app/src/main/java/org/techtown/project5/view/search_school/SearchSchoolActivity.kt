@@ -37,11 +37,7 @@ class SearchSchoolActivity : BaseActivity() {
                 binding.recyclerView.visibility = View.VISIBLE
                 binding.questionLayout.visibility = View.GONE
 
-                val adapter =
-                    SearchSchoolAdapter(
-                        this@SearchSchoolActivity,
-                        viewModel.schoolDataList
-                    )
+                val adapter = SearchSchoolAdapter(this@SearchSchoolActivity, viewModel.schoolDataList)
                 binding.recyclerView.adapter = adapter
             })
             onNoEvent.observe(this@SearchSchoolActivity, Observer {

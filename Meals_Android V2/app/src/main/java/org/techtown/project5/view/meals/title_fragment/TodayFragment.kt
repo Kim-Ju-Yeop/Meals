@@ -29,8 +29,10 @@ class TodayFragment : BaseFragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner
 
-        getData() // GetSchoolData
-        viewModel.getMeals(school_id, office_id) // MealsServerData
+        getData()
+
+        viewModel.checkTime()
+        viewModel.getMeals(school_id, office_id)
 
         today = mCalendar.time
         binding.date.text = simpleDateFormat.format(today)

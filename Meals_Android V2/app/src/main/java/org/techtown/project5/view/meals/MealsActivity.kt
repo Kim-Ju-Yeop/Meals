@@ -64,11 +64,10 @@ class MealsActivity : BaseActivity() {
         binding.layoutTab.addTab(binding.layoutTab.newTab().setText("오늘"))
         binding.layoutTab.addTab(binding.layoutTab.newTab().setText("내일"))
 
-        val mealsAdapter = MealsAdapter(
-            supportFragmentManager,
-            binding.layoutTab.tabCount
-        )
+        val mealsAdapter = MealsAdapter(supportFragmentManager, binding.layoutTab.tabCount)
         binding.viewPager.adapter = mealsAdapter
+
+        binding.viewPager.setCurrentItem(1)
 
         binding.viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(binding.layoutTab))
         binding.layoutTab.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{

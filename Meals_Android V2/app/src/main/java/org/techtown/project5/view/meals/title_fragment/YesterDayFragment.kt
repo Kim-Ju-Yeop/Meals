@@ -32,6 +32,8 @@ class YesterDayFragment : BaseFragment() {
         binding.lifecycleOwner
 
         getData() // GetSchoolData
+
+        viewModel.checkTime()
         viewModel.getMeals(school_id, office_id) // MealsServerData
 
         mCalendar.add(Calendar.DAY_OF_WEEK, -1)

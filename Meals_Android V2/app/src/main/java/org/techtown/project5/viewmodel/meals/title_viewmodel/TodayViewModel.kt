@@ -6,6 +6,9 @@ import org.techtown.project5.network.Response
 import org.techtown.project5.viewmodel.base.BaseViewModel
 import retrofit2.Call
 import retrofit2.Callback
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 class TodayViewModel : BaseViewModel() {
 
@@ -37,16 +40,33 @@ class TodayViewModel : BaseViewModel() {
                                     }
                                 }
                             }
-                            onBreakfastEvent.call()
+                            when(checkCount){
+                                1 -> onBreakfastEvent.call()
+                                2 -> onLunchEvent.call()
+                                3 -> onDinnerEvent.call()
+                            }
                         }
                     }
-                    404 -> onBreakfastEvent.call()
+                    404 -> when(checkCount){
+                        1 -> onBreakfastEvent.call()
+                        2 -> onLunchEvent.call()
+                        3 -> onDinnerEvent.call()
+                    }
                 }
             }
             override fun onFailure(call: Call<Response<Data>>, t: Throwable) {
                 Log.e("getMeals[Error]", "급식 조회 과정에서 서버와 통신이 되지 않습니다.")
             }
         })
+    }
+
+    fun checkTime(){
+        val formatTime = simpleDateFormat.format(date)
+        val hour = Integer.parseInt(formatTime)
+
+        if(hour < 11) checkCount = 1
+        else if(hour < 13) checkCount = 2
+        else checkCount = 3
     }
 
     // Next & Back
