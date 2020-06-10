@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- 액션바가 보이도록 하는 코드입니다. -->
+    <style name="open" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <!--- 액션바의 배경을 선택하는 colorPrimary-->
+        <item name="colorPrimary">#B06AB3</item>
+
+        <!--- 액션바의 상단 배경 선택하는 colorPrimaryDark-->
+        <item name="colorPrimaryDark">#B06AB3</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textColor">#FFFFFF</item>
+
+    </style>
+
+
+    <!-- 액션바가 안보이도록 하는 코드입니다.-->
+    <style name="close" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorAccent">#FFFFFF</item>
+    </style>
+
+</resources>
