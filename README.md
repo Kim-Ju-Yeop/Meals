@@ -22,6 +22,12 @@
 | Development Language | Java, Retrofit2 | JavaScript        |                                  |
 | Development Tool     | Android Studio  | Visual Studio Code | Adobe Illustrator, Photoshop, XD |
 
+## Skill
+- <a href="https://github.com/ybq/Android-SpinKit">SpinKit</a>
+- <a href="https://github.com/square/retrofit">Retrofit</a>
+- <a href="https://github.com/AppIntro/AppIntro">AppIntro</a>
+- <a href="https://developer.android.com/jetpack/androidx/releases/lifecycle">ViewModel</a>
+
 ## V1. UI/UX
 <div>
 <img width="130" src="https://user-images.githubusercontent.com/49600974/67153406-8ad30180-f323-11e9-8b86-cefb4cf17d15.png"></img>
