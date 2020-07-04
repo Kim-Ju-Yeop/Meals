@@ -28,6 +28,9 @@
 - <a href="https://github.com/AppIntro/AppIntro">AppIntro</a>
 - <a href="https://developer.android.com/jetpack/androidx/releases/lifecycle">ViewModel</a>
 
+## Design Pattern
+- MVVM 디자인 패턴을 활용하여 구현했습니다.
+
 ## V1. UI/UX
 <div>
 <img width="130" src="https://user-images.githubusercontent.com/49600974/67153406-8ad30180-f323-11e9-8b86-cefb4cf17d15.png"></img>
