@@ -19,7 +19,7 @@
 ## Stack
 |                      | Android 김주엽     | Server 최진우         | Design 김혜선                       |
 |:--------------------:|:---------------:|:------------------:|:--------------------------------:|
-| Development Language | JAVA, RETROFIT2 | Java Script        |                                  |
+| Development Language | Java, Retrofit2 | JavaScript        |                                  |
 | Development Tool     | Android Studio  | Visual Studio Code | Adobe Illustrator, Photoshop, XD |
 
 ## V1. UI/UX
@@ -42,14 +42,15 @@
 </div> 
 
 ## Google Play
-  - Google Play Store 2019.10.20 1차 버전을 출시하였습니다.
-  - Google Play Store 2020.03.14 2차 버전을 출시하였습니다.
   - Google Play Store <a href ="https://play.google.com/store/apps/details?id=org.techtown.project5" target ="_blank" title ="Meals 밀수 사용하기">Meals 밀수 사용하기</a>
+  - Google Play Store 2019년 10월 20일 1.0.0 버전을 출시하였습니다.
+  - Google Play Store 2020년 03월 14일 1.1.0 버전을 출시하였습니다.
+  - Google Play Store 2020년 06월 06일 1.2.0 버전을 출시하였습니다.
+  - Google Play Store 2020년 06월 25일 1.2.1 버전을 출시하였습니다.
 
-## Naver Blog
-  - Naver Blog에 Meals 밀수 애플리케이션에 대한 자세한 설명을 해두었습니다.
-  - Naver Blog <a href ="http://kjy13299.blog.me/221686185631" target ="_blank" title ="Meals 밀수 설명보기">1차 버전 Meals 밀수 설명보기 </a>
-  - Naver Blog <a href ="https://kjy13299.blog.me/221853839702" target ="_blank" title ="Meals 밀수 설명보기">2차 버전 Meals 밀수 설명보기 </a>
+## Blog
+  - 네이버 블로그 <a href ="http://kjy13299.blog.me/221686185631" target ="_blank" title ="Meals 밀수 설명보기">1차 버전 Meals 밀수 설명보기 </a>
+  - 네이버 블로그 <a href ="https://kjy13299.blog.me/221853839702" target ="_blank" title ="Meals 밀수 설명보기">2차 버전 Meals 밀수 설명보기 </a>
 
 
 
