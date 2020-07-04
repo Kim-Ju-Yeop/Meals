@@ -19,7 +19,7 @@
 ## Stack
 |                      | Android 김주엽     | Server 최진우         | Design 김혜선                       |
 |:--------------------:|:---------------:|:------------------:|:--------------------------------:|
-| Development Language | Java, Retrofit2 | JavaScript        |                                  |
+| Development Language | Java, Kotlin | JavaScript        |                                  |
 | Development Tool     | Android Studio  | Visual Studio Code | Adobe Illustrator, Photoshop, XD |
 
 ## Skill
