@@ -31,7 +31,8 @@
 ## Design Pattern
 - MVVM 디자인 패턴을 활용하여 구현했습니다.
 
-## V1. UI/UX
+## UI/UX
+#### V1 버전
 <div>
 <img width="130" src="https://user-images.githubusercontent.com/49600974/67153406-8ad30180-f323-11e9-8b86-cefb4cf17d15.png"></img>
 <img width="130" src="https://user-images.githubusercontent.com/49600974/67153407-8ad30180-f323-11e9-97ba-86020c40c5bb.png"></img>
@@ -41,7 +42,7 @@
 <img width="130" src="https://user-images.githubusercontent.com/49600974/67153411-8b6b9800-f323-11e9-9311-0c286e5bb3c8.png"></img>
 </div>
 
-## V2. UI/UX
+#### V2 버전
 <div>
 <img width="162" src="https://user-images.githubusercontent.com/49600974/76450754-a8f3e800-6411-11ea-9703-6aaea7c6feec.png"></img>
 <img width="162" src="https://user-images.githubusercontent.com/49600974/76450743-a42f3400-6411-11ea-9098-f47efdc6e053.png"></img>
