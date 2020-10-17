@@ -60,7 +60,7 @@
 
 ## ONE store
   - ONE store <a href ="https://m.onestore.co.kr/mobilepoc/apps/appsDetail.omp?prodId=0000751096" target ="_blank" title ="Meals 밀수 사용하기">Meals 밀수 사용하기</a>
-  - Google Play Store 2020년 09월 18일 1.2.1 버전을 출시하였습니다.
+  - ONE store 2020년 09월 18일 1.2.1 버전을 출시하였습니다.
 
 ## Blog
   - 네이버 블로그 <a href ="http://kjy13299.blog.me/221686185631" target ="_blank" title ="Meals 밀수 설명보기">1차 버전 Meals 밀수 설명보기 </a>
